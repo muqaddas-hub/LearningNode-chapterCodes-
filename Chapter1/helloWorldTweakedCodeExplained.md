@@ -17,7 +17,7 @@ http.createServer(function(req,res){}).listen(8124)
 It creates a server that listen on port 8124.
 
 ``` Node
-var name = require('url).parse(req.url,true).query.name;
+var name = require('url').parse(req.url,true).query.name;
 ```
 
 In above line we are chaining exported module properties. We are basically parsing the url to extract the query parameters.
