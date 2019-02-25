@@ -7,7 +7,7 @@ http.createServer(function(req,res){
     if(name === undefined) name = 'world';
 
     if(name == 'burningbird'){
-        var file = 'phoenix5a.png';
+        var file = 'phoenix5a.jpg';
         fs.stat(file,function(err,stat){
             if(err){
                 console.error(err);
@@ -15,7 +15,7 @@ http.createServer(function(req,res){
                 res.end("Sorry, Burningbird isn't around right now \n");
             } else {
                 var img = fs.readFileSync(file);
-                res.contentType = 'image/png';
+                res.contentType = 'image/jpg';
                 res.contentLength = stat.size;
                 res.end(img, 'binary')
             }
@@ -26,4 +26,6 @@ http.createServer(function(req,res){
     }
 }).listen(8124);
 
+//for hello world response
 console.log('Server running at http://127.0.0.1:8124')
+console.log('Server running at http://127.0.0.1:8124/?name=burningbird')
