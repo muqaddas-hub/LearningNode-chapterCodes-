@@ -57,7 +57,7 @@ if(name == 'burningbird'){
 
 - If the file doesn’t exist, the application handles the situation gracefully: it issues a friendly message that the bird has flown the coop, but also provides error information at the console, using the **console.error()** method this time:
 
-```
+```js
 { [Error: ENOENT: no such file or directory, stat 'phoenix5a.png']
 errno: -2,
 code: 'ENOENT',
